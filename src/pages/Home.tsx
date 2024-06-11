@@ -6,6 +6,8 @@ import { addDays } from 'date-fns';
 import './Home.css';
 
 const Home: React.FC = () => {
+  // Change this to true and react-day-picker will auto focus the selected date range
+  const shouldFocusSelectedDate: boolean = false;
   const modal = useRef<HTMLIonModalElement>(null);
   const contentRef = useRef<HTMLIonContentElement>(null);
   const initialRange: DateRange = {
@@ -51,7 +53,7 @@ const Home: React.FC = () => {
             <DayPicker
               defaultMonth={new Date(2024, 0)}
               disableNavigation
-              initialFocus={false}
+              initialFocus={shouldFocusSelectedDate}
               mode="range"
               numberOfMonths={12}
               selected={range}
