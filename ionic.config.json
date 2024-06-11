@@ -1,0 +1,7 @@
+{
+  "name": "scroll-into-view",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
